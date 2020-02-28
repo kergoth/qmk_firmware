@@ -54,3 +54,8 @@ const uint16_t PROGMEM fn_actions[] = {
     [0] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_ESC),
 };
 
+void keyboard_post_init_user(void) {
+    rgblight_enable();
+    rgblight_sethsv(191, 255, 164);
+    rgblight_mode(1);
+}
